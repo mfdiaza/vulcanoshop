@@ -1,6 +1,6 @@
 {
   "name": "vulcanoshop",
-  "homepage": "https://mfdiaza.github.io/vulcanoshop/"
+  "homepage": "https://mfdiaza.github.io/vulcanoshop/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
