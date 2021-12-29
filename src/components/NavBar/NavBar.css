@@ -1,0 +1,18 @@
+.navBar ul li {
+    list-style-type: none;
+    text-decoration: none;
+    display: inline;
+    margin: 0;
+    padding: 0;
+}
+
+.navBar li a {
+    display: inline;
+    padding: 8px;
+    background-color: #dddddd;
+  }
+
+.navBar p {
+    color: #34344d;
+    font-size: 2rem;
+}
