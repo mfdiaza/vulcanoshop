@@ -1,18 +1,40 @@
-.navBar ul li {
-    list-style-type: none;
-    text-decoration: none;
-    display: inline;
-    margin: 0;
-    padding: 0;
+.navBar {
+  display: flex;
+  flex-direction: row;
+  font-size: 20px;
+  text-align: center;
+  width: 100%;
+  float: right;
+  color: burlywood;
+  background-color: #34344d;
+  justify-content: space-between;
 }
 
-.navBar li a {
-    display: inline;
-    padding: 8px;
-    background-color: #dddddd;
-  }
+.navBar ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
-.navBar p {
-    color: #34344d;
-    font-size: 2rem;
+.navBar ul li {
+  list-style-type: none;
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+}
+
+.navBar .logoDiv {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.navBar ul li a:hover {
+  color: orange;
+}
+.navBar li a {
+  padding: 8px;
+  color: burlywood;
+  text-decoration: none;
 }
