@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/vulcanoshop/static/css/main.ca0626eb.css",
-    "main.js": "/vulcanoshop/static/js/main.ea89e501.js",
+    "main.css": "/vulcanoshop/static/css/main.bacbcf17.css",
+    "main.js": "/vulcanoshop/static/js/main.1ce34fc7.js",
     "static/media/logo_swirl.svg": "/vulcanoshop/static/media/logo_swirl.4921dce05a163cfe41b166543bba7cd3.svg",
     "index.html": "/vulcanoshop/index.html",
-    "main.ca0626eb.css.map": "/vulcanoshop/static/css/main.ca0626eb.css.map",
-    "main.ea89e501.js.map": "/vulcanoshop/static/js/main.ea89e501.js.map"
+    "main.bacbcf17.css.map": "/vulcanoshop/static/css/main.bacbcf17.css.map",
+    "main.1ce34fc7.js.map": "/vulcanoshop/static/js/main.1ce34fc7.js.map"
   },
   "entrypoints": [
-    "static/css/main.ca0626eb.css",
-    "static/js/main.ea89e501.js"
+    "static/css/main.bacbcf17.css",
+    "static/js/main.1ce34fc7.js"
   ]
 }
