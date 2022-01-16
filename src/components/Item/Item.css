@@ -4,6 +4,7 @@
     align-items: center;
 }
 .card-img-top {
-    width: 70%;
-    height: 12vw;
+    width: 120px;
+    height: 120px;
+    margin: auto;
 }
