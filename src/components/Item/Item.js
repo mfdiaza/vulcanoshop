@@ -1,7 +1,8 @@
 import { Card, Button, Badge } from "react-bootstrap";
+import { Link } from 'react-router-dom';
 import './Item.css'
 
-export const Item = ({title, price, image}) => {
+export const Item = ({id, title, price, image}) => {
   return (
     <Card style={{ width: '18rem' }}>
     <Card.Img variant="top" src={image} />
@@ -9,7 +10,7 @@ export const Item = ({title, price, image}) => {
       <Card.Title>{title}</Card.Title>
       <Badge bg="secondary">${price}</Badge>
       <Card.Text>
-      <Button variant="primary">Ver mas detalles</Button>
+      <Link to={`/vulcanoshop/product/${id}`}><Button variant="primary">Ver mas detalles</Button></Link>
       </Card.Text>
     </Card.Body>
   </Card>);
