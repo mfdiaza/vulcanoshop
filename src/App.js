@@ -27,8 +27,11 @@ function App() {
           <Route path="/vulcanoshop/tienda">
             <Tienda />
           </Route>
-          <Route path="/vulcanoshop/product/:productID">
+          <Route path="/vulcanoshop/item/:productID">
             <Product />
+          </Route>
+          <Route path="/vulcanoshop/category/:categoryID">
+            <Tienda />
           </Route>
           <Route path="*">
             <Error />

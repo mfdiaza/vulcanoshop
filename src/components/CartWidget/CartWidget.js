@@ -1,5 +1,4 @@
 import "./CartWidget.css";
-// import cart from "../../images/carrito.png";
 import cart from "../../images/cart.png";
 
 export const CartWidget = () => {

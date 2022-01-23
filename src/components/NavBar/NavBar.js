@@ -7,7 +7,7 @@ export const NavBar = () => {
   return (
     <Navbar bg="dark" variant="dark" expand="lg">
       <Container>
-        <Navbar.Brand href="#home">
+        <Navbar.Brand href="/vulcanoshop/">
           <img
             src= {logo}
             width="30"
@@ -24,8 +24,11 @@ export const NavBar = () => {
             <Nav.Link href="/vulcanoshop/cart">Cart</Nav.Link>
             <Nav.Link href="/vulcanoshop/about">About</Nav.Link>
           <NavDropdown title="Tienda" id="basic-nav-dropdown">
-          <NavDropdown.Item href="/vulcanoshop/tienda">Tienda</NavDropdown.Item>
-          <NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>
+          <NavDropdown.Item href="/vulcanoshop/tienda">Catalogo</NavDropdown.Item>
+          <NavDropdown.Item href="/vulcanoshop/category/men's clothing">Ropa Hombre</NavDropdown.Item>
+          <NavDropdown.Item href="/vulcanoshop/category/women's clothing">Ropa Mujer</NavDropdown.Item>
+          <NavDropdown.Item href="/vulcanoshop/category/electronics">Electrónica</NavDropdown.Item>
+          <NavDropdown.Item href="/vulcanoshop/category/jewelery">Joyas</NavDropdown.Item>
           </NavDropdown>
           </Nav>
         </Navbar.Collapse>

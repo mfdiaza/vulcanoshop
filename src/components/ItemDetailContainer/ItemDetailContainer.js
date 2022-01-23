@@ -1,4 +1,4 @@
-// import { ItemCount } from "../ItemCount/ItemCount";
+import { ItemCount } from "../ItemCount/ItemCount";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { ItemDetail } from "../ItemDetail/ItemDetail";
@@ -21,9 +21,16 @@ export const ItemDetailContainer = () => {
   return (
     <>
       {item ? (
-        <div className="ItemDetailContainer">
-          <ItemDetail item={item} />
-          {/* <ItemCount stock={12} initial={1} /> */}
+        <div className="container">
+          <div className="row">
+            <div className="col-8">
+              {/* <div className="ItemDetailContainer"> */}
+              <ItemDetail item={item} />
+            </div>
+            <div className="col-4 d-flex justify-content-center align-items-center">
+              <ItemCount stock={12} initial={1} />
+            </div>
+          </div>
         </div>
       ) : (
         <p>Cargando producto...</p>
