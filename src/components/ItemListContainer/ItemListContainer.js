@@ -13,7 +13,6 @@ export const ItemListContainer = ({ greeting }) => {
     const parseData = await getData.json();
 
     if (categoryID) {
-      console.log(parseData)
       setProducts(parseData.filter( prod => prod.category === categoryID))
     }
     else {
