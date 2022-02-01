@@ -1,10 +1,12 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { Link } from 'react-router-dom';
 import { Button, Badge, Stack } from "react-bootstrap";
+import { CartContext } from "../../context/cartContext";
 
-export const ItemCount = ({ stock, initial }) => {
+export const ItemCount = ({ stock, initial, item }) => {
   const [count, setCount] = useState(initial);
   const [add, setAdd] = useState(false);
+  const { addItem } = useContext(CartContext)
 
   const restItem = () => {
     const newValue = count - 1;
@@ -20,6 +22,8 @@ export const ItemCount = ({ stock, initial }) => {
     const message = `Agregaste ${count} producto`;
     count === 1 ? alert(message) : alert(`${message}s`);
     setAdd(!add)
+    console.log(item, count)
+    addItem(item, count)
   };
 
   return (
