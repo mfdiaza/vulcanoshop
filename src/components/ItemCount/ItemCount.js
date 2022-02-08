@@ -22,7 +22,6 @@ export const ItemCount = ({ stock, initial, item }) => {
     const message = `Agregaste ${count} producto`;
     count === 1 ? alert(message) : alert(`${message}s`);
     setAdd(!add)
-    console.log(item, count)
     addItem(item, count)
   };
 

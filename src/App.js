@@ -9,6 +9,7 @@ import { Error } from "./pages/error";
 import { Tienda } from "./pages/tienda";
 import { Product } from "./pages/product";
 import { CartProvider } from "./context/cartContext";
+import { Order } from "./pages/order"
 
 function App() {
   return (
@@ -25,6 +26,9 @@ function App() {
             </Route>
             <Route path="/vulcanoshop/cart">
               <Cart />
+            </Route>
+            <Route path="/vulcanoshop/order">
+              <Order />
             </Route>
             <Route path="/vulcanoshop/tienda">
               <Tienda />

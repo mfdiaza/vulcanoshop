@@ -2,28 +2,40 @@ import "./CartWidget.css";
 import cart from "../../images/cart.png";
 import { useContext } from "react";
 import { CartContext } from "../../context/cartContext";
+import { Badge } from "react-bootstrap";
 
 export const CartWidget = () => {
-
-  const { items } = useContext(CartContext)
+  const { items } = useContext(CartContext);
 
   let conteo = 0;
 
-  console.log(items)
-
   items.map((item) => {
-    conteo = conteo + item.qty
-  })
-  return (
-    <div className="container">
-      <div>
-        {conteo}
+    conteo = conteo + item.qty;
+  });
+
+  if (conteo === 0) {
+    return (
+      <div className="container">
+        <ul>
+          <li>
+            <img src={cart} alt="Logo" height="48" className="carrito" />
+          </li>
+        </ul>
       </div>
-      <ul>
-        <li>
-          <img src={cart} alt="Logo" height="48" className="carrito" />
-        </li>
-      </ul>
-    </div>
-  );
+    );
+  }
+  else {
+    return (
+      <div className="container">
+        <ul>
+          <li>
+            <img src={cart} alt="Logo" height="48" className="carrito" />
+            <Badge pill bg="secondary">
+              {conteo}
+            </Badge>
+          </li>
+        </ul>
+      </div>
+    );
+  }
 };
