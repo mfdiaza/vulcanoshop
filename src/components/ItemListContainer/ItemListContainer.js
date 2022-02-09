@@ -4,6 +4,17 @@ import { useEffect, useState } from "react";
 import { ItemList } from "../ItemList/ItemList";
 import { useParams } from "react-router-dom";
 import { Spinner } from "react-bootstrap";
+import {
+  addDoc,
+  collection,
+  deleteDoc,
+  doc,
+  getDocs,
+  query,
+  updateDoc,
+  where,
+} from "firebase/firestore";
+import { db } from "../../firebase/firebase";
 
 export const ItemListContainer = ({ greeting }) => {
   const [products, setProducts] = useState([]);
@@ -15,11 +26,24 @@ export const ItemListContainer = ({ greeting }) => {
   const getProducts = async () => {
     try {
       setIsLoading(true);
-      const getData = await fetch("https://fakestoreapi.com/products");
-      const parseData = await getData.json();
-
+      const { docs } = await getDocs(query(collection(db, "items")));
+      const parseData = docs.map((doc) => {
+        return {
+          id: doc.id,
+          ...doc.data(),
+        };
+      });
       if (categoryID) {
-        setProducts(parseData.filter((prod) => prod.category === categoryID));
+        const { docs } = await getDocs(
+          query(collection(db, "items"), where("category", "==", categoryID))
+        );
+        const parseCategory = docs.map((doc) => {
+          return {
+            id: doc.id,
+            ...doc.data(),
+          };
+        });
+        setProducts(parseCategory);
       } else {
         setProducts(parseData);
       }
@@ -41,8 +65,7 @@ export const ItemListContainer = ({ greeting }) => {
       </div>
       {isLoading ? (
         <div className="loader">
-          <Spinner animation="grow" variant="secondary" role="status">
-          </Spinner>
+          <Spinner animation="grow" variant="secondary" role="status"></Spinner>
           <h1>Cargando productos...</h1>
         </div>
       ) : error ? (

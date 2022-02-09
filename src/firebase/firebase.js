@@ -1,11 +1,10 @@
 import { initializeApp } from 'firebase/app';
-import { getFirestore, collection, getDocs } from 'firebase/firestore/lite';
-
+import { getFirestore } from 'firebase/firestore';
 
 const firebaseConfig = {
   apiKey: process.env.REACT_APP_APIKEY,
   authDomain: process.env.REACT_APP_AUTHDOMAIN,
-  projectId: process.env.REACT_APP_PROJECTID,
+  projectId: 'vulcanoshop-coder',
   storageBucket: process.env.REACT_APP_STORAGEBUCKET,
   messagingSenderId: process.env.REACT_APP_MESSAGINGSENDERID,
   appId: process.env.REACT_APP_APPID,
@@ -14,4 +13,4 @@ const firebaseConfig = {
 // Initialize Firebase
 
 export const appFirebase = initializeApp(firebaseConfig);
-export const db = getFirestore(appFirebase);
+export const db = getFirestore();
