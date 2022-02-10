@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom'
 
 export const Cart = () => {
   const { items, removeItem, clear, total } = useContext(CartContext);
+  console.log(items, total)
   if (items.length === 0) {
     return (
       <>
@@ -29,7 +30,7 @@ export const Cart = () => {
           </thead>
           <tbody>
             {items.map((item) => (
-              <tr key={item.id}>
+              <tr key={item.idprod}>
                 <td>{item.qty}</td>
                 <td>{item.name}</td>
                 <td>${item.price}</td>
@@ -37,7 +38,7 @@ export const Cart = () => {
                 <td>
                   <Button
                     variant="warning"
-                    onClick={() => removeItem(item.id, item.price, item.qty)}
+                    onClick={() => removeItem(item.idprod, item.price, item.qty)}
                   >
                     Remover item
                   </Button>
