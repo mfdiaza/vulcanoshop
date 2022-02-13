@@ -21,7 +21,7 @@ export const Cart = () => {
         <Table striped bordered hover>
           <thead>
             <tr>
-              <th>Cantidad</th>
+              <th>#</th>
               <th>Item</th>
               <th>Precio unitario</th>
               <th>Subtotal</th>

@@ -23,8 +23,7 @@ export const CartWidget = () => {
         </ul>
       </div>
     );
-  }
-  else {
+  } else {
     return (
       <div className="container">
         <ul>

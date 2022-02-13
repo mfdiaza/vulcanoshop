@@ -21,12 +21,9 @@ export const NavBar = () => {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
-            <Nav.Link as={Link} to="/cart">
-              Cart
-            </Nav.Link>
-            <NavDropdown title="Tienda" id="basic-nav-dropdown">
+            <NavDropdown title="Categorias" id="basic-nav-dropdown">
               <NavDropdown.Item as={Link} to="/tienda">
-                Catalogo
+                Catalogo completo
               </NavDropdown.Item>
               <NavDropdown.Item as={Link} to="/category/men's clothing">
                 Ropa Hombre
@@ -41,11 +38,16 @@ export const NavBar = () => {
                 Joyas
               </NavDropdown.Item>
             </NavDropdown>
+            <Nav.Link as={Link} to="/cart">
+              Cart
+            </Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Container>
       <Container>
-        <CartWidget />
+        <Nav.Link as={Link} to="/cart">
+          <CartWidget />
+        </Nav.Link>
       </Container>
     </Navbar>
   );
