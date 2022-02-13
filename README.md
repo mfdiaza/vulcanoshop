@@ -4,6 +4,5 @@
 
  ### React JS
  
- * gh-pages: Modulo usado para la publicacion del site en GitHub Pages
  * react-bootstrap: Manejo de estilos
- * react-router-dom v5.3.0: Manejo de rutas
+ * react-router-dom v6.2.1: Manejo de rutas
