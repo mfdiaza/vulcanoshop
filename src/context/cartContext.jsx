@@ -7,15 +7,15 @@ export const CartProvider = ({ children }) => {
   const [total, setTotal] = useState(0);
 
   const isInCart = (id) => {
-    const detectaItem = items.find((item) => item.idprod === id);
+    const detectaItem = items.find((item) => item.id === id);
     return detectaItem;
   };
 
   const addItem = (item, qty) => {
-    isInCart(item.idprod)
+    isInCart(item.id)
       ? setItems(
           items.map((producto) => {
-            if (producto.idprod === item.idprod) {
+            if (producto.id === item.id) {
               producto.qty += qty
             }
             return producto;
@@ -23,7 +23,7 @@ export const CartProvider = ({ children }) => {
         )
       : setItems([
           ...items,
-          { idprod: item.idprod, name: item.title, price: item.price, qty: qty },
+          { id: item.id, idprod: item.idprod, name: item.title, price: item.price, qty: qty },
         ]);
 
     const sumItem = item.price * qty;
@@ -31,7 +31,7 @@ export const CartProvider = ({ children }) => {
   };
 
   const removeItem = (id, qty, price) => {
-    setItems(items.filter(item => item.idprod !== id))
+    setItems(items.filter(item => item.id !== id))
     
     const restItem = qty * price;
     setTotal(total - restItem);

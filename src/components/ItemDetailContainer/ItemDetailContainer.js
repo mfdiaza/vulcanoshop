@@ -18,8 +18,9 @@ export const ItemDetailContainer = () => {
     try {
       setIsLoading(true);
       const docRef = doc(db, "items", productID);
-      const docSnap = await getDoc(docRef);
-      setItem(docSnap.data());
+      const docSnap = await getDoc(docRef)
+      const result = {id: docSnap.id, ...docSnap.data()}
+      setItem(result);
     } catch (error) {
       setError(error);
     } finally {
