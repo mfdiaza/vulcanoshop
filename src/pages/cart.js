@@ -10,7 +10,7 @@ export const Cart = () => {
     return (
       <>
         <p>Carrito vacio</p>
-        <Link to="/vulcanoshop/tienda">
+        <Link to="/tienda">
           <Button variant="primary">Volver a la tienda</Button>
         </Link>
       </>

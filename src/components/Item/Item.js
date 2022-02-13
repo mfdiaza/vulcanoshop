@@ -10,7 +10,7 @@ export const Item = ({id, title, price, image}) => {
       <Card.Title>{title}</Card.Title>
       <Badge bg="secondary">${price}</Badge>
       <Card.Text>
-      <Link to={`/vulcanoshop/item/${id}`}><Button variant="primary">Ver mas detalles</Button></Link>
+      <Link to={`/item/${id}`}><Button variant="primary">Ver mas detalles</Button></Link>
       </Card.Text>
     </Card.Body>
   </Card>);

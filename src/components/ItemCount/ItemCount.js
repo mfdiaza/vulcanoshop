@@ -32,7 +32,7 @@ export const ItemCount = ({ stock, initial, item }) => {
         
         <Stack gap={2} className="mx-auto">
           <Badge bg="secondary">Agregado!</Badge>
-          <Link to={`/vulcanoshop/cart`}><Button variant="success">Finalizar compra</Button></Link>
+          <Link to={`/cart`}><Button variant="success">Finalizar compra</Button></Link>
         </Stack>
         
         :

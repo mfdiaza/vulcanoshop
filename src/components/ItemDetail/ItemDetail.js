@@ -9,7 +9,7 @@ export const ItemDetail = ({ item }) => {
       <p>{item.description}</p>
       <span>${item.price}</span>
       <div className="gap-3">
-        <Link to="/vulcanoshop/tienda">
+        <Link to="/tienda">
           <Button variant="primary">Volver a la tienda</Button>
         </Link>
       </div>
