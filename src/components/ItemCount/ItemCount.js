@@ -36,7 +36,7 @@ export const ItemCount = ({ stock, initial, item }) => {
         </Stack>
         
         :
-      <div className="d-flex">
+      <div className="d-flex flex-wrap">
         <Button variant="outline-primary" className="px-3 mx-3" onClick={restItem}>-</Button>
         <span className="px-2 mx-2">{count}</span>
         <Button variant="outline-primary" className="px-3 mx-3" onClick={sumItem}>+</Button>

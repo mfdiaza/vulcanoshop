@@ -6,6 +6,7 @@ import { Cart } from "./pages/cart";
 import { ItemListContainer } from "./components/ItemListContainer/ItemListContainer";
 import { ItemDetailContainer } from "./components/ItemDetailContainer/ItemDetailContainer";
 import { CartProvider } from "./context/cartContext";
+import { Order } from './pages/checkout'
 
 function App() {
   return (
@@ -39,6 +40,11 @@ function App() {
             exact
             path="/item/:productID"
             element={<ItemDetailContainer />}
+          />
+          <Route
+            exact
+            path="/order"
+            element={<Order />}
           />
         </Routes>
       </BrowserRouter>

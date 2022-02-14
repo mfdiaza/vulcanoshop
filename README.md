@@ -6,3 +6,4 @@
  
  * react-bootstrap: Manejo de estilos
  * react-router-dom v6.2.1: Manejo de rutas
+ * firebase v9.6.5: Base de datos

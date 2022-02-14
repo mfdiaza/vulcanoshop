@@ -1,7 +1,7 @@
 import { useContext } from "react";
 import { CartContext } from "../context/cartContext";
-import { Table, Button } from "react-bootstrap";
-import { Link } from 'react-router-dom'
+import { Table, Button, Stack } from "react-bootstrap";
+import { Link } from "react-router-dom";
 
 export const Cart = () => {
   const { items, removeItem, clear, total } = useContext(CartContext);
@@ -53,9 +53,17 @@ export const Cart = () => {
             </tr>
           </tbody>
         </Table>
-        <Button variant="outline-danger" onClick={() => clear()}>
-          Vaciar carrito
-        </Button>
+
+        <Stack direction="horizontal" gap={3}>
+          <Button variant="outline-danger" onClick={() => clear()}>
+            Vaciar carrito
+          </Button>
+          <div className="vr" />
+          <Link to={`/order`}> <Button variant="outline-success" gap="3">
+            Ir al checkout
+          </Button>
+          </Link>
+        </Stack>
       </>
     );
   }
