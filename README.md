@@ -1,10 +1,26 @@
 # Vulcano Shop - by Marcelo Díaz ( Comisión 23230 - REACT JS )
 
+## Proyecto E-commerce realizado con React JS para el Proyecto Final de Coderhouse.
+#### Profesor:  Francisco Rodriguez 
+#### Tutor: Alejandro Fernandez
+---
+
 ## Modulos utilizados
 
- ### React JS
- 
- * react-bootstrap: Manejo de estilos
- * react-router-dom v6.2.1: Manejo de rutas
- * firebase v9.6.5: Base de datos
- * sweetalert2 v11.4.0: Manejo de alertas y avisos al usuario
+| Modulo | Version | URL |
+| ----------- | ----------- | ----------- |
+| react-bootstrap | 2.1.2 | https://react-bootstrap.github.io/ |
+| react-router-dom | 6.2.1 | https://v5.reactrouter.com/web/guides/quick-start |
+| firebase | 9.6.5 | https://firebase.google.com |
+| sweetalert2 | 11.4.0 | https://sweetalert2.github.io/ |
+
+---
+
+### Como iniciar el proyecto
+
+```
+git clone https://github.com/mfdiaza/vulcanoshop.git
+cd vulcanoshop
+npm install
+npm start
+```
