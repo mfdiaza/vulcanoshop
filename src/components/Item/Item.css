@@ -1,15 +1,22 @@
 .cardContainer {
-    width: 18rem;    
+  width: 18rem;
+  display: flex;
 }
 
-.card-img {
-    /* justify-content: center; */
-    display:inline;
+.card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content:space-between;
     align-items: center;
 }
+.card-img {
+  /* justify-content: center; */
+  display: inline;
+  align-items: center;
+}
 .card-img-top {
-    height: 180px;
-    width: 100%;
-    display: block;
-    object-fit: contain;
+  height: 180px;
+  width: 100%;
+  display: block;
+  object-fit: contain;
 }

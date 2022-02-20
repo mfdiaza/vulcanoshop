@@ -2,16 +2,23 @@ import { useContext } from "react";
 import { CartContext } from "../context/cartContext";
 import { Table, Button, Stack } from "react-bootstrap";
 import { Link } from "react-router-dom";
+import "./styles.css";
+import emptyCart from "../images/empty-cart.svg";
 
 export const Cart = () => {
   const { items, removeItem, clear, total } = useContext(CartContext);
   if (items.length === 0) {
     return (
       <>
-        <p>Carrito vacio</p>
-        <Link to="/tienda">
-          <Button variant="primary">Volver a la tienda</Button>
-        </Link>
+        <div className="emptyCart">
+          <p>
+            <strong>El carrito está vacío!</strong>
+          </p>
+          <img src={emptyCart} className="emptyCartEmpty" />
+          <Link to="/tienda">
+            <Button variant="primary">Volver a la tienda</Button>
+          </Link>
+        </div>
       </>
     );
   } else {
@@ -59,9 +66,11 @@ export const Cart = () => {
             Vaciar carrito
           </Button>
           <div className="vr" />
-          <Link to={`/order`}> <Button variant="outline-success" gap="3">
-            Ir al checkout
-          </Button>
+          <Link to={`/order`}>
+            {" "}
+            <Button variant="outline-success" gap="3">
+              Ir al checkout
+            </Button>
           </Link>
         </Stack>
       </>
