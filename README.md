@@ -1,7 +1,7 @@
 # Vulcano Shop ( Comisión 23230 - REACT JS )
 
 ## Proyecto E-commerce realizado con React JS para el Proyecto Final de Coderhouse.
-### **Autor**: Marcelo Diaz
+#### **Autor**: Marcelo Diaz
 #### **Profesor**:  Francisco Rodriguez 
 #### **Tutor**: Alejandro Fernandez
 ---
