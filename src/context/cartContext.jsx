@@ -41,8 +41,15 @@ export const CartProvider = ({ children }) => {
     setItems([])
   }
 
+
+  let conteo = 0;
+
+  items.map((item) => {
+    conteo = conteo + item.qty;
+  });
+
   return (
-    <CartContext.Provider value={{ items, addItem, removeItem, clear, total }}>
+    <CartContext.Provider value={{ items, addItem, removeItem, clear, total, conteo }}>
       {children}
     </CartContext.Provider>
   );

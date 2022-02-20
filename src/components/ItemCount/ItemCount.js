@@ -1,12 +1,12 @@
 import { useContext, useState } from "react";
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
 import { Button, Badge, Stack } from "react-bootstrap";
 import { CartContext } from "../../context/cartContext";
 
 export const ItemCount = ({ stock, initial, item }) => {
   const [count, setCount] = useState(initial);
   const [add, setAdd] = useState(false);
-  const { addItem } = useContext(CartContext)
+  const { addItem } = useContext(CartContext);
 
   const restItem = () => {
     const newValue = count - 1;
@@ -19,32 +19,41 @@ export const ItemCount = ({ stock, initial, item }) => {
   };
 
   const onAdd = () => {
-    const message = `Agregaste ${count} producto`;
-    count === 1 ? alert(message) : alert(`${message}s`);
-    setAdd(!add)
-    addItem(item, count)
+    setAdd(!add);
+    addItem(item, count);
   };
 
   return (
     <div>
-      {
-        add ? 
-        
+      {add ? (
         <Stack gap={2} className="mx-auto">
-          <Badge bg="secondary">Agregado!</Badge>
-          <Link to={`/cart`}><Button variant="success">Finalizar compra</Button></Link>
+          { count === 1 ? <Badge bg="secondary">Sumaste {count} producto al carrito!</Badge> : <Badge bg="secondary">Sumaste {count} productos al carrito!</Badge>}
+          <Link to={`/cart`}>
+            <Button variant="success">Finalizar compra</Button>
+          </Link>
         </Stack>
-        
-        :
-      <div className="d-flex flex-wrap">
-        <Button variant="outline-primary" className="px-3 mx-3" onClick={restItem}>-</Button>
-        <span className="px-2 mx-2">{count}</span>
-        <Button variant="outline-primary" className="px-3 mx-3" onClick={sumItem}>+</Button>
-        <Button onClick={onAdd} className="mx-2">
-          Sumar al carrito
-        </Button>
-      </div>
-      }
+      ) : (
+        <div className="d-flex flex-wrap">
+          <Button
+            variant="outline-primary"
+            className="px-3 mx-3"
+            onClick={restItem}
+          >
+            -
+          </Button>
+          <span className="px-2 mx-2">{count}</span>
+          <Button
+            variant="outline-primary"
+            className="px-3 mx-3"
+            onClick={sumItem}
+          >
+            +
+          </Button>
+          <Button onClick={onAdd} className="mx-2">
+            Sumar al carrito
+          </Button>
+        </div>
+      )}
     </div>
   );
 };

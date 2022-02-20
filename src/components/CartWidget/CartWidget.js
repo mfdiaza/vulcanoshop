@@ -5,13 +5,7 @@ import { CartContext } from "../../context/cartContext";
 import { Badge } from "react-bootstrap";
 
 export const CartWidget = () => {
-  const { items } = useContext(CartContext);
-
-  let conteo = 0;
-
-  items.map((item) => {
-    conteo = conteo + item.qty;
-  });
+  const { conteo } = useContext(CartContext);
 
   if (conteo === 0) {
     return (
