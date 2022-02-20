@@ -10,7 +10,7 @@
 | Modulo | Version | URL |
 | ----------- | ----------- | ----------- |
 | react-bootstrap | 2.1.2 | https://react-bootstrap.github.io/ |
-| react-router-dom | 6.2.1 | https://v5.reactrouter.com/web/guides/quick-start |
+| react-router-dom | 6.2.1 | https://reactrouter.com/docs/en/v6 |
 | firebase | 9.6.5 | https://firebase.google.com |
 | sweetalert2 | 11.4.0 | https://sweetalert2.github.io/ |
 
