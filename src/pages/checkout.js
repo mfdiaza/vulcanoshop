@@ -23,11 +23,7 @@ export const Order = () => {
   };
 
   const submitHandler = async (e) => {
-    console.log("hola");
     e.preventDefault();
-
-    // const ordersCollection = db.collection('buyer')
-
     setError(false);
 
     if (!buyer.name || !buyer.phone || !buyer.email) {
@@ -69,8 +65,6 @@ export const Order = () => {
             ),
           });
         });
-
-        console.log("Document written with ID: ", docRef.id);
         clear();
       } catch (error) {
         <p>Se produjo un error: {error}</p>;
